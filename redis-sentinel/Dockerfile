@@ -4,6 +4,5 @@ RUN mkdir -p /usr/local/etc/redis
 COPY sentinel.conf /usr/local/etc/redis/sentinel.conf
 
 EXPOSE 26379
-EXPOSE 6379
 
 ENTRYPOINT ["redis-server", "/usr/local/etc/redis/sentinel.conf", "--sentinel"]
